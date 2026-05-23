@@ -184,8 +184,13 @@
   .download .container{position:relative;z-index:1}
   .download-sub{color:var(--ink-soft);font-size:17px;margin-top:18px}
   .download-cta{margin-top:32px}
+  .dl-version{margin-left:10px;padding:2px 8px;font-size:11px;font-weight:600;
+    letter-spacing:.04em;background:rgba(255,255,255,0.18);border-radius:3px;
+    color:rgba(255,255,255,0.92)}
   .download-note{color:var(--ink-faint);font-size:13px;letter-spacing:.05em;
     margin-top:16px}
+  .download-note a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--line)}
+  .download-note a:hover{color:var(--gold-bright);border-color:var(--gold-bright)}
 
   /* ---- footer ---- */
   .site-footer{border-top:1px solid var(--line);padding:48px 0 56px}
@@ -246,6 +251,7 @@
       <a href="#support" data-i18n="navSupport">支持</a>
     </nav>
     <div class="header-actions">
+      <!-- TODO: 換成你的 GitHub repo 連結 -->
       <a class="icon-link" href="https://github.com/kevinlin49361128-stack/score-arranger" target="_blank" rel="noopener" aria-label="GitHub">
         <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.02-1.49-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.81.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.67.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.55 7.55 0 0 1 8 4.36c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
       </a>
@@ -336,19 +342,34 @@
           <p data-i18n="feat3Body">改編完成前，它逐一檢查可演奏性，並以定向修復一步步消除問題 —— 不是隨機嘗試，而是每一次都讓問題確實減少。</p>
         </article>
         <article class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3 data-i18n="feat4Title">難度，可以自己定</h3>
+          <p data-i18n="feat4Body">給定一個目標難度（1–5 級），它會逐小節抹平：太簡單的自動加厚，太難的自動簡化。為學生編譜，再也不用反覆試湊。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h2"/><path d="M3 12h2"/><path d="M3 16h2"/><path d="M9 6c0 2-2 3-2 6 0 2 1 4 3 4s3-2 3-4-2-4-2-6"/><path d="M16 8h5"/><path d="M16 12h5"/><path d="M16 16h5"/></svg></div>
+          <h3 data-i18n="feat5Title">弦樂手的把位提示</h3>
+          <p data-i18n="feat5Body">點選任何一個難小節，立刻顯示弦樂各聲部的最佳指法 —— 哪一弦、哪一把位。Viterbi DP 把跨小節換把成本一起算，不是逐音貪婪。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c0-5 4-9 9-9s9 4 9 9c0 3-2 5-4 5h-2"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/><path d="M2 22l4-4"/></svg></div>
+          <h3 data-i18n="feat6Title">用講的就能改譜</h3>
+          <p data-i18n="feat6Body">「第二小提琴太單薄，加和弦」「結尾要弱一點」 —— 用自然語言描述，AI 翻成可套用的結構化操作，每一步都顯示對品質的影響。</p>
+        </article>
+        <article class="feature-card reveal">
           <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="7.5" height="14" rx="1.5"/><rect x="13.5" y="5" width="7.5" height="14" rx="1.5"/></svg></div>
-          <h3 data-i18n="feat4Title">原譜與改編，並排對照</h3>
-          <p data-i18n="feat4Body">雙面板讓你同時看見原始總譜與改編結果，標出每一處值得再看一眼的地方，並且能立刻試聽。</p>
+          <h3 data-i18n="feat7Title">原譜與改編，並排對照</h3>
+          <p data-i18n="feat7Body">雙面板讓你同時看見原始總譜與改編結果。可以單獨靜音某個聲部、慢速播放（0.5x / 0.75x），逐處試聽、逐處微調。</p>
         </article>
         <article class="feature-card reveal">
           <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7z"/><path d="M14 3v4h4"/><path d="M12 11v6m-2.6-2.6L12 17l2.6-2.6"/></svg></div>
-          <h3 data-i18n="feat5Title">從 PDF 樂譜直接匯入</h3>
-          <p data-i18n="feat5Body">手邊只有掃描的 PDF？內建光學樂譜辨識，連 IMSLP 上夾著說明頁的整本總譜，也能順利讀進來。</p>
+          <h3 data-i18n="feat8Title">從 PDF / 錄音直接匯入</h3>
+          <p data-i18n="feat8Body">手邊只有掃描的 PDF？內建光學樂譜辨識（OMR）。連鋼琴錄音也能：basic-pitch AMT 把音訊轉成 MusicXML，再進改編流程。</p>
         </article>
         <article class="feature-card reveal">
           <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4.2L16.6 4.2a2 2 0 0 1 2.8 2.8L7.8 18.6z"/><path d="m14 6.8 3.2 3.2"/></svg></div>
-          <h3 data-i18n="feat6Title">你是最後的決定者</h3>
-          <p data-i18n="feat6Body">每一個改編建議，你都能微調、否決、或自己重寫。它給你起點與選項，最終的音樂由你定義。</p>
+          <h3 data-i18n="feat9Title">你是最後的決定者</h3>
+          <p data-i18n="feat9Body">每一個改編建議，你都能微調、否決、或自己重寫。版本樹自動記錄每一次嘗試，A/B 比較不同方案。最終的音樂由你定義。</p>
         </article>
       </div>
     </div>
@@ -407,12 +428,13 @@
         <h2 class="section-title" data-i18n="dlTitle">讓那首曲子，被演奏出來。</h2>
         <p class="download-sub" data-i18n="dlSub">免費下載，不需要註冊帳號。</p>
         <div class="download-cta">
-          <a class="btn btn-primary" href="https://github.com/kevinlin49361128-stack/score-arranger-web/releases/latest" target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="https://github.com/kevinlin49361128-stack/score-arranger/releases/latest" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg>
             <span data-i18n="dlCta">下載 Score Arranger</span>
+            <span class="dl-version">v0.1.22</span>
           </a>
         </div>
-        <p class="download-note" data-i18n="dlNote">適用於 macOS</p>
+        <p class="download-note" data-i18n="dlNote">適用於 macOS (Apple Silicon, 已簽章 + 公證) · <a href="https://github.com/kevinlin49361128-stack/score-arranger/releases/tag/v0.1.22" target="_blank" rel="noopener" data-i18n="dlChangelog">看本版更新內容</a></p>
       </div>
     </div>
   </section>
@@ -436,7 +458,7 @@
 (function(){
   "use strict";
 
-  /* ---------- 三語 (繁中 / English / 日本語) ---------- */
+  /* ---------- 中英雙語 ---------- */
   var EN = {
     skip:"Skip to main content",
     navFeatures:"Features", navHow:"How it works", navSupport:"Support", navCta:"Download",
@@ -459,12 +481,18 @@
     feat2Body:"Violin chords stay within four notes on adjacent strings; every instrument stays inside its range and technique. Constraints aren't a later check — they're respected as it arranges.",
     feat3Title:"It only counts if it's playable",
     feat3Body:"Before it finishes, it checks playability point by point and clears issues with directed repair — not random attempts, but steps that measurably reduce the problems each time.",
-    feat4Title:"Original and arrangement, side by side",
-    feat4Body:"A dual-panel view shows the source and the arrangement together, flags every spot worth a second look, and lets you hear it right away.",
-    feat5Title:"Import straight from a PDF",
-    feat5Body:"Only have a scanned PDF? Built-in optical music recognition reads it in — even full scores from IMSLP that arrive with text pages attached.",
-    feat6Title:"You make the final call",
-    feat6Body:"Every suggestion can be adjusted, rejected, or rewritten. It gives you a starting point and options — the final music is yours to define.",
+    feat4Title:"Difficulty, on your terms",
+    feat4Body:"Set a target level (1–5) and it levels the piece bar by bar: too easy gets thickened, too hard gets simplified. No more trial-and-error when arranging for students.",
+    feat5Title:"String fingerings on demand",
+    feat5Body:"Click any tough measure and see the best fingering for each string part — which string, which position. A Viterbi DP factors in cross-bar position changes, not a greedy note-by-note pass.",
+    feat6Title:"Edit with your words",
+    feat6Body:"\"Second violin is too thin, add chords.\" \"Soften the ending.\" Describe what you want in plain language; the AI turns it into structured operations and shows the quality delta of each one.",
+    feat7Title:"Original and arrangement, side by side",
+    feat7Body:"A dual-panel view shows the source and the arrangement together. Mute individual parts, play back at half speed — listen and tweak point by point.",
+    feat8Title:"Import straight from a PDF or recording",
+    feat8Body:"Only have a scanned PDF? Built-in optical music recognition reads it in. Got a piano recording? basic-pitch AMT converts it to MusicXML, ready for arranging.",
+    feat9Title:"You make the final call",
+    feat9Body:"Every suggestion can be adjusted, rejected, or rewritten. A version tree records every attempt; A/B compare alternatives. The final music is yours to define.",
     howEyebrow:"Three steps",
     howTitle:"From a full score to your performance",
     how1Title:"Bring in the music",
@@ -481,109 +509,43 @@
     dlTitle:"Let that piece be played.",
     dlSub:"Free download. No account required.",
     dlCta:"Download Score Arranger",
-    dlNote:"For macOS",
+    dlNote:"For macOS (Apple Silicon, signed + notarized) · <a href=\"https://github.com/kevinlin49361128-stack/score-arranger/releases/tag/v0.1.22\" target=\"_blank\" rel=\"noopener\">See what's new</a>",
+    dlChangelog:"See what's new",
     footTagline:"Intelligent score arranging",
     footMade:"Built in spare time by a developer who loves music.",
     footSupport:"Support this project",
     footSource:"Source on GitHub"
   };
-  var JA = {
-    skip:"メインコンテンツへスキップ",
-    navFeatures:"機能", navHow:"使い方", navSupport:"応援", navCta:"ダウンロード",
-    heroEyebrow:"インテリジェントな楽譜編曲ツール",
-    heroTitle:"オーケストラのために書かれた曲を、<br>あなたたちが演奏できる形へ。",
-    heroSub:"Score Arranger は、楽典を理解する編曲のパートナーです。煩雑な声部の割り当てと演奏可能性のチェックを引き受け、音楽的な判断と美意識は、あなたに委ねます。",
-    heroCta1:"無料でダウンロード", heroCta2:"仕組みを見る",
-    heroNote:"macOS · 無料・オープンソース · 登録不要",
-    mockSource:"元の総譜", mockTarget:"編曲後",
-    storyEyebrow:"なぜ",
-    storyTitle:"編曲は手仕事。<br>雑務に埋もれてはならない。",
-    storyP1:"心を動かすオーケストラ曲を聴いて、ふと思う —— 何人かの友人と一緒に演奏できたら、どんなにいいだろう。そこで腰を据えて編曲を始める —— そして週末をまるごと費やすことになる。和音はヴァイオリンで押さえられるか、どの音も音域を外れていないか、主旋律がいつの間にか別の声部へ移っていないか、一つひとつ確かめながら。",
-    storyP2:"Score Arranger は、そうした雑務を引き受けます。曲の構造を読み解き、楽器の制約を尊重した、確かに演奏できる編曲を提案します。あなたは本当に大切なことに集中できます —— この旋律を誰に歌わせるか、この音の重なりを残すか、ここの表情は正しいか。",
-    storyQuote:"全自動の代替ではなく、知的な支援を。<br>最後に決めるのは、いつもあなたです。",
-    featEyebrow:"できること",
-    featTitle:"楽譜を読み解くパートナー",
-    feat1Title:"音楽を理解する分析",
-    feat1Body:"まず曲を読み解きます —— 主旋律を見つけ、和声を分析し、各声部の役割を見極める。編曲のすべての判断が、理解の上に築かれます。",
-    feat2Title:"楽典の制約を踏まえた編曲",
-    feat2Body:"ヴァイオリンの和音は4音まで、隣り合う弦の上だけ。どの楽器も、自らの音域と技術の範囲にとどまります。制約は後からのチェックではなく、編曲のその瞬間に守られます。",
-    feat3Title:"演奏できてこそ意味がある",
-    feat3Body:"編曲を仕上げる前に、演奏可能性を一つずつ確認し、狙いを定めた修復で問題を一歩ずつ解消します —— 行き当たりばったりではなく、毎回確実に問題を減らしていきます。",
-    feat4Title:"元の譜と編曲を、並べて見比べる",
-    feat4Body:"2画面表示で元の総譜と編曲結果を同時に見渡し、もう一度見ておきたい箇所を一つひとつ示し、その場で試聴できます。",
-    feat5Title:"PDF の楽譜から直接取り込む",
-    feat5Body:"手元にあるのはスキャンした PDF だけ？内蔵の光学楽譜認識(OMR)が読み取ります —— 解説ページの挟まった IMSLP の総譜一冊でも、問題なく取り込めます。",
-    feat6Title:"最後に決めるのは、あなた",
-    feat6Body:"どの編曲の提案も、微調整し、却下し、あるいは自分で書き直せます。Score Arranger は出発点と選択肢を示すだけ —— 最終的な音楽は、あなたが定義します。",
-    howEyebrow:"3ステップ",
-    howTitle:"一冊の総譜から、あなたたちの演奏へ",
-    how1Title:"曲を取り込む",
-    how1Body:"MusicXML、MIDI、あるいはスキャンした PDF —— 原曲を Score Arranger に渡します。",
-    how2Title:"編成を選び、編曲を受け取る",
-    how2Body:"弦楽四重奏、ヴァイオリンとピアノ、ピアノ独奏…… 目標の編成を選べば、すぐに編曲が提案されます。",
-    how3Title:"確認し、聴き、書き出す",
-    how3Body:"並べて見比べ、試奏を聴き、細部を一つひとつ微調整して、総譜とパート譜を書き出します。",
-    supEyebrow:"応援",
-    supTitle:"無料で使えます。<br>もし役に立ったなら……",
-    supBody:"Score Arranger は無料・オープンソースで、編曲をしたいすべての人のためにあります。これからもそうあり続けます。一人の開発者が、仕事の合間に作っているものです —— もし週末を一つ取り戻せたなら、コーヒーを一杯おごってください。まったく気兼ねは要りません。使っていただけること自体が、何よりの励みです。",
-    supCta:"コーヒーを一杯おごる",
-    dlEyebrow:"はじめる",
-    dlTitle:"あの曲を、演奏されるものに。",
-    dlSub:"無料ダウンロード。アカウント登録は不要です。",
-    dlCta:"Score Arranger をダウンロード",
-    dlNote:"macOS 対応",
-    footTagline:"インテリジェントな楽譜編曲ツール",
-    footMade:"音楽を愛する開発者が、仕事の合間に作りました。",
-    footSupport:"このプロジェクトを応援する",
-    footSource:"GitHub のソースコード"
-  };
-  var TITLE = {
-    zh:"Score Arranger — 智慧樂譜改編工具",
-    en:"Score Arranger — Intelligent score arranging",
-    ja:"Score Arranger — インテリジェントな楽譜編曲ツール"
-  };
+  var TITLE = { zh:"Score Arranger — 智慧樂譜改編工具", en:"Score Arranger — Intelligent score arranging" };
 
   var nodes = document.querySelectorAll("[data-i18n]");
   var ZH = {};
   nodes.forEach(function(el){ ZH[el.getAttribute("data-i18n")] = el.innerHTML; });
   var toggle = document.getElementById("langToggle");
 
-  /* 三語循環: 繁中 → English → 日本語 */
-  var LANGS = ["zh", "en", "ja"];
-  var DICTS = { zh: ZH, en: EN, ja: JA };
-  var HTML_LANG = { zh: "zh-Hant", en: "en", ja: "ja" };
-  /* 切換鈕顯示「下一個語言」 */
-  var TOGGLE_LABEL = { zh: "EN", en: "日本語", ja: "台灣" };
-  var TOGGLE_ARIA = {
-    zh: "Switch to English", en: "日本語に切り替え", ja: "切換為繁體中文（台灣）"
-  };
-
   function applyLang(lang){
-    if (LANGS.indexOf(lang) < 0) lang = "zh";
-    var dict = DICTS[lang];
+    var en = (lang === "en");
     nodes.forEach(function(el){
       var key = el.getAttribute("data-i18n");
-      var val = (dict[key] != null) ? dict[key] : ZH[key];
+      var val = en ? (EN[key] != null ? EN[key] : ZH[key]) : ZH[key];
       if (val != null) el.innerHTML = val;
     });
-    document.documentElement.lang = HTML_LANG[lang];
-    document.title = TITLE[lang] || TITLE.zh;
+    document.documentElement.lang = en ? "en" : "zh-Hant";
+    document.title = en ? TITLE.en : TITLE.zh;
     if (toggle){
-      toggle.textContent = TOGGLE_LABEL[lang];
-      toggle.setAttribute("aria-label", TOGGLE_ARIA[lang]);
+      toggle.textContent = en ? "TW" : "EN";
+      toggle.setAttribute("aria-label", en ? "切換為中文" : "Switch to English");
     }
     try { localStorage.setItem("sa-lang", lang); } catch(e){}
   }
 
   var saved = null;
   try { saved = localStorage.getItem("sa-lang"); } catch(e){}
-  var currentLang = (LANGS.indexOf(saved) >= 0) ? saved : "zh";
-  applyLang(currentLang);
+  applyLang(saved === "en" ? "en" : "zh");
 
   if (toggle){
     toggle.addEventListener("click", function(){
-      currentLang = LANGS[(LANGS.indexOf(currentLang) + 1) % LANGS.length];
-      applyLang(currentLang);
+      applyLang(document.documentElement.lang === "en" ? "zh" : "en");
     });
   }
 
